@@ -1,15 +1,16 @@
-import React, { useRef, focus } from 'react'
+import React, { useRef } from 'react'
 
 export default function PracticeThree() {
   const yearRef = useRef()
   const monthRef = useRef()
 
   function handleChange(e) {
-    console.log('testing')
-    const { maxLength, value, name } = e.target
-    const { fieldName, fieldIndex } = name.split("-")
+    const { maxLength, value, name } = e.target;
+    console.log(name)
+    const { fieldName, fieldIndex } = name.split("-");
+    console.log(fieldIndex)
     if (value.length >= maxLength) {
-      const nextField = document.querySelector(`input[name=field-${fieldIndex + 1}]`)
+      const nextField = document.querySelector(`input[name=field-${parseInt(fieldIndex, 10) + 1}]`)
       console.log(nextField)
       nextField.focus()
     }
@@ -19,7 +20,7 @@ export default function PracticeThree() {
     <>
         <input 
           type='text'
-          name='field-1'
+          name="field-1"
           maxLength={2}
           placeholder='MM'
           ref={monthRef}
@@ -28,7 +29,7 @@ export default function PracticeThree() {
 
         <input 
           type='text'
-          name='field-2'
+          name="field-2"
           maxLength={4}
           placeholder='YYYY'
           ref={yearRef}
