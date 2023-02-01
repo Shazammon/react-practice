@@ -29,3 +29,16 @@ console.log(firstName)
 console.log(city)
 console.log(personThree)
 
+// function printUser(user) {
+//     console.log(user)
+//     console.log(`Name is ${user.name}. Age is ${user.age}`)
+// }
+
+// instead of the above function, you can use object destructuring for this:
+
+function printUser({name, age, favoriteFood = 'Watermelon'}) {
+    console.log(`Name is ${name}. Age is ${age}. Food is ${favoriteFood}`)
+}
+ 
+
+printUser(personOne)
