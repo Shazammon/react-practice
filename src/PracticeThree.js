@@ -7,10 +7,11 @@ export default function PracticeThree() {
   function handleChange(e) {
     const { maxLength, value, name } = e.target;
     console.log(name)
-    const { fieldName, fieldIndex } = name.split("-");
-    console.log(fieldIndex)
+    console.log(name.split('-'))
+    const fieldIndexArray = name.split("-");
+    console.log(fieldIndexArray)
     if (value.length >= maxLength) {
-      const nextField = document.querySelector(`input[name=field-${parseInt(fieldIndex, 10) + 1}]`)
+      const nextField = document.querySelector(`input[name=field-${parseInt(fieldIndexArray[1], 10) + 1}]`)
       console.log(nextField)
       nextField.focus()
     }
