@@ -18,10 +18,14 @@ const personTwo = {
 }
 
 // const { name: firstName, age, favoriteFood = 'Rice' } = personTwo
-const { name: firstName, ...rest } = personTwo
+// const { name: firstName, ...rest } = personTwo
+const { name: firstName, address: { city } } = personTwo // this is nesting an object destructuring inside an object destructuring
+const personThree = {...personOne, ...personTwo} // overrides everything from person 1 if it exists in person 2
 
 console.log(firstName)
-console.log(age)
-console.log(favoriteFood)
-console.log(rest)
+// console.log(age)
+// console.log(favoriteFood)
+// console.log(rest)
+console.log(city)
+console.log(personThree)
 
