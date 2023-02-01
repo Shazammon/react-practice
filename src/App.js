@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import TodoList from './TodoList';
 import { v4 as uuidv4 } from 'uuid';
+import PracticeThree from './PracticeThree';
 
 
 const LOCAL_STORAGE_KEY = 'todoApp.todos'
@@ -40,6 +41,13 @@ function App() {
     const newTodos = todos.filter(todo => !todo.complete)
     setTodos(newTodos)
   }
+
+  // function handleChange(e) {
+  //   if (e.target.value.length <= MAX_LENGTH) {
+  //     this.
+  //   } 
+  // }
+
   return (
     <>
       <TodoList todos={todos} toggleTodo={toggleTodo}/>
@@ -47,6 +55,7 @@ function App() {
       <button onClick={handleAddTodo}>Add Todo</button>
       <button onClick={handleClearTodos}>Clear Completed Todos</button>
       <div>{todos.filter(todo => !todo.complete).length} left to do</div>
+      <PracticeThree />
     </>
   )
 }
