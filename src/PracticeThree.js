@@ -1,6 +1,12 @@
-import React from 'react'
+import React, { useRef } from 'react'
 
 export default function PracticeThree() {
+  const yearRef = useRef()
+
+  function handleChange(e) {
+    
+  }
+
   return (
     <>
         <input 
