@@ -2,7 +2,12 @@ const alphabet = ['A', 'B', 'C', 'D', 'E', 'F']
 const numbers = ['1', '2', '3', '4', '5', '6']
 
 // const a = alphabet[0]
-const [a, b] = 
+const [a,, c, ...rest] = alphabet
+
+const newArray = [...alphabet, ...numbers] // could also just say alphabet.concat(numbers)
 
 console.log(a)
 // console.log(b)
+console.log(c)
+console.log(rest)
+console.log(newArray)
