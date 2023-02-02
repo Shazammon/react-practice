@@ -48,6 +48,7 @@ export default function PracticeThree() {
           maxLength={4}
           placeholder='YYYY'
           ref={yearRef}
+          style={{ padding: "20px 20px", margin: "100px", textAlign: "left", color: "white" }}
         ></input>
     </>
   )
