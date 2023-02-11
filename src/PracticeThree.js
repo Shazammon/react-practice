@@ -20,6 +20,7 @@ export default function PracticeThree() {
   return (
     <>
       <div class="mb-6">
+        <div>hi</div>
     <label for="large-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Month</label>
     <input type="text" 
             name="field-1"
@@ -48,7 +49,7 @@ export default function PracticeThree() {
           maxLength={4}
           placeholder='YYYY'
           ref={yearRef}
-          style={{ padding: "20px 20px", margin: "100px", textAlign: "left", color: "white" }}
+          style={{ padding: "20px 20px", margin: "100px", textAlign: "left", color: "blue", fontFamily: "fantasy" }}
         ></input>
     </>
   )

@@ -1,7 +1,8 @@
 import React from 'react'
 
 export default function Todo( {todo, toggleTodo} ) {
-    function handleTodoClick() {
+    const handleTodoClick = async e => {
+        e.preventDefault
         toggleTodo(todo.id)
     }
   return (
